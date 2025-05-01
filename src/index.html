@@ -1,53 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ED-PRINT - Início</title>
-  <link rel="stylesheet" href="styles/main.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo ED-PRINT" />
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>ED-PRINT</title>
+  </head>
+  <body>
     <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="pages/sobre.html">Sobre</a></li>
-        <li><a href="pages/servicos.html">Serviços</a></li>
-        <li><a href="pages/produtos.html">Produtos</a></li>
-        <li><a href="pages/contato.html">Contato</a></li>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">ED-<span>PRINT</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
       </ul>
+      <div class="nav__btns">
+        <button class="btn">Fale Conosco</button>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h1>Bem-vindo à ED-PRINT</h1>
-      <p>Impressões, xerox e muito mais!</p>
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="assets/header.png" alt="ED-PRINT" />
+      </div>
+      <div class="header__content">
+        <h1>Serviços Rápidos <span>e Eficientes</span> em um Só Lugar</h1>
+        <p class="section__description">
+          Na ED-PRINT, realizamos impressões, xerox, escaneamentos, boletos,
+          agendamento de RG, plastificação e muito mais. Tudo com agilidade e
+          qualidade para você.
+        </p>
+        <div class="header__btns">
+          <button class="btn">Conheça os Serviços</button>
+          <a href="#">
+            <span><i class="ri-play-fill"></i></span>
+            Veja Vídeo
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="service" id="services">
+      <div class="section__container service__container">
+        <h2 class="section__header">Soluções Inteligentes para o seu Dia a Dia</h2>
+        <div class="service__grid">
+          <div class="service__card">
+            <div><i class="ri-printer-line"></i></div>
+            <h4>Impressão & Xerox</h4>
+            <p class="section__description">
+              Impressões e cópias em alta qualidade com rapidez e precisão.
+            </p>
+          </div>
+          <div class="service__card">
+            <div><i class="ri-scan-line"></i></div>
+            <h4>Escaneamento</h4>
+            <p class="section__description">
+              Digitalize documentos com clareza e segurança.
+            </p>
+          </div>
+          <div class="service__card">
+            <div><i class="ri-file-text-line"></i></div>
+            <h4>Emissão de Boletos</h4>
+            <p class="section__description">
+              Emitimos boletos bancários com praticidade e segurança.
+            </p>
+          </div>
+          <div class="service__card">
+            <div><i class="ri-id-card-line"></i></div>
+            <h4>Agendamento de RG</h4>
+            <p class="section__description">
+              Agende a emissão do seu RG com a nossa ajuda.
+            </p>
+          </div>
+        </div>
+        <div class="service__btn">
+          <button class="btn">Ver Todos os Serviços</button>
+        </div>
+      </div>
     </section>
 
-    <section class="servicos-destaque">
-      <h2>Principais Serviços</h2>
-      <ul>
-        <li>Impressão P&B e colorida</li>
-        <li>Xerox P&B e colorida</li>
-        <li>Edição e escaneamento de documentos</li>
-        <li>Emissão de boletos</li>
-        <li>Declarações em geral</li>
-        <li>Agendamento de RG</li>
-        <li>Plastificação</li>
-        <li>Situação cadastral do CPF</li>
-        <li>Antecedentes criminais</li>
-      </ul>
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="assets/about.png" alt="Sobre a ED-PRINT" />
+      </div>
+      <div class="about__content">
+        <h2 class="section__header">Facilitando sua rotina com eficiência e confiança</h2>
+        <ul class="about__list">
+          <li>
+            <span><i class="ri-focus-2-line"></i></span>
+            <div>
+              <h4>Nossa Missão</h4>
+              <p class="section__description">
+                Proporcionar serviços rápidos com qualidade, atendendo às necessidades diárias da população.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span><i class="ri-slideshow-line"></i></span>
+            <div>
+              <h4>Nossa Visão</h4>
+              <p class="section__description">
+                Ser referência em atendimento rápido e confiável em Parauapebas e região.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span><i class="ri-search-eye-line"></i></span>
+            <div>
+              <h4>Valores</h4>
+              <p class="section__description">
+                Agilidade, transparência, compromisso com o cliente e excelência nos serviços.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 ED-PRINT. Todos os direitos reservados.</p>
-  </footer>
+    <section class="section__container subscribe__container" id="contact">
+      <div class="subscribe__content">
+        <h2 class="section__header">
+          Receba Novidades da ED-PRINT por E-mail
+        </h2>
+        <form action="/">
+          <input type="text" placeholder="Digite seu e-mail aqui..." />
+          <button class="btn">
+            Inscrever-se
+            <span><i class="ri-arrow-right-long-line"></i></span>
+          </button>
+        </form>
+      </div>
+    </section>
 
-  <script src="scripts/main.js"></script>
-</body>
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#">ED-<span>PRINT</span></a>
+          </div>
+          <p class="section__description">
+            ED-PRINT oferece serviços rápidos e essenciais como impressão, xerox, escaneamento e muito mais.
+          </p>
+          <h3>Siga-nos</h3>
+          <ul class="footer__socials">
+            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+            <li><a href="#"><i class="ri-whatsapp-line"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Links Rápidos</h4>
+          <ul class="footer__links">
+            <li><a href="#">Sobre a Empresa</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Suporte</h4>
+          <ul class="footer__links">
+            <li><a href="#">Perguntas Frequentes</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Fale com a Gente</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <ul class="footer__links">
+            <li><a href="#"><i class="ri-phone-fill"></i> (94) 98133-4688</a></li>
+            <li><a href="#"><i class="ri-mail-fill"></i> edprint.contato@gmail.com</a></li>
+            <li><a href="#"><i class="ri-map-pin-2-fill"></i> Parauapebas - PA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        © 2025 ED-PRINT. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
