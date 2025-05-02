@@ -1,0 +1,223 @@
+.section__header {
+    margin-top: 60px;
+}
+
+.service__card{
+    text-align: center;
+    align-items: center;
+}
+  
+  
+.service__card p {
+    color: var(--extra-light);
+    margin-bottom: 10px;
+}
+
+.service__card div {
+    margin-bottom: 1rem;
+    max-width: max-content;
+    padding: 5px 8px;
+    font-size: 1.75rem;
+}
+
+.service__card > div {
+    background-color: transparent !important;
+}
+
+.service__card:nth-child(1):hover {
+    border-color: #00d5be;
+    box-shadow: 0 5px 30px #00d5be;
+}
+
+.service__card:nth-child(2):hover {
+    border-color: #00d5be;
+    box-shadow: 0 5px 30px #00d5be;
+}
+
+.service__card:nth-child(3):hover {
+    border-color: #00d5be;
+    box-shadow: 0 5px 30px #00d5be;
+}
+
+.service__card:nth-child(4):hover {
+    border-color: #00d5be;
+    box-shadow: 0 5px 30px #00d5be;
+}
+  
+.service__card:nth-child(5):hover {
+    border-color: #ff637e;
+    box-shadow: 0 5px 30px #ff637e;
+}
+
+.service__card:nth-child(6):hover {
+    border-color: #ff637e;
+    box-shadow: 0 5px 30px #ff637e;
+}
+
+.service__card:nth-child(7):hover {
+    border-color: #ff637e;
+    box-shadow: 0 5px 30px #ff637e;
+}
+
+.service__card:nth-child(8):hover {
+    border-color: #ff637e;
+    box-shadow: 0 5px 30px #ff637e;
+}
+  
+.service__card:nth-child(9):hover {
+    border-color: #c27aff;
+    box-shadow: 0 5px 30px #c27aff;
+}
+
+.service__card:nth-child(10):hover {
+    border-color: #c27aff;
+    box-shadow: 0 5px 30px #c27aff;
+}
+
+.service__card:nth-child(11):hover {
+    border-color: #c27aff;
+    box-shadow: 0 5px 30px #c27aff;
+}
+
+.service__card:nth-child(12):hover {
+    border-color: #c27aff;
+    box-shadow: 0 5px 30px #c27aff;
+}
+
+.service__card:nth-child(13):hover {
+    border-color: #1903d8;
+    box-shadow: 0 5px 30px #1903d8;
+}
+
+.service__card:nth-child(14):hover {
+    border-color: #1903d8;
+    box-shadow: 0 5px 30px #1903d8;
+}
+
+.service__card:nth-child(15):hover {
+    border-color: #1903d8;
+    box-shadow: 0 5px 30px #1903d8;
+}
+
+.service__card:nth-child(16):hover {
+    border-color: #1903d8;
+    box-shadow: 0 5px 30px #1903d8;
+}
+  
+.service__card:nth-child(17):hover {
+    border-color: #00bcff;
+    box-shadow: 0 5px 30px #00bcff;
+}
+
+.service__card:nth-child(18):hover {
+    border-color: #00bcff;
+    box-shadow: 0 5px 30px #00bcff;
+}
+
+.service__card:nth-child(19):hover {
+    border-color: #00bcff;
+    box-shadow: 0 5px 30px #00bcff;
+}
+
+.service__card:nth-child(20):hover {
+    border-color: #00bcff;
+    box-shadow: 0 5px 30px #00bcff;
+}
+
+.service__card:nth-child(21):hover {
+    border-color: #ff1d1d;
+    box-shadow: 0 5px 30px #ff1d1d;
+}
+
+.service__card:nth-child(22):hover {
+    border-color: #ff1d1d;
+    box-shadow: 0 5px 30px #ff1d1d;
+}
+
+.service__card:nth-child(1) div {
+    color: #00d5be;
+}
+
+.service__card:nth-child(2) div {
+    color: #00d5be;
+}
+
+.service__card:nth-child(3) div {
+    color: #00d5be;
+}
+
+.service__card:nth-child(4) div {
+    color: #00d5be;
+}
+  
+.service__card:nth-child(5) div {
+    color: #ff637e;
+}
+
+.service__card:nth-child(6) div {
+    color: #ff637e;
+}
+
+.service__card:nth-child(7) div {
+    color: #ff637e;
+}
+
+.service__card:nth-child(8) div {
+    color: #ff637e;
+}
+  
+.service__card:nth-child(9) div {
+    color: #c27aff;
+}
+
+.service__card:nth-child(10) div {
+    color: #c27aff;
+}
+
+.service__card:nth-child(11) div {
+    color: #c27aff;
+}
+
+.service__card:nth-child(12) div {
+    color: #c27aff;
+}
+
+.service__card:nth-child(13) div {
+    color: #1903d8;
+}
+
+.service__card:nth-child(14) div {
+    color: #1903d8;
+}
+
+.service__card:nth-child(15) div {
+    color: #1903d8;
+}
+
+.service__card:nth-child(16) div {
+    color: #1903d8;
+}
+  
+.service__card:nth-child(17) div {
+    color: #00bcff;
+}
+
+.service__card:nth-child(18) div {
+    color: #00bcff;
+}
+
+.service__card:nth-child(19) div {
+    color: #00bcff;
+}
+
+.service__card:nth-child(20) div {
+    color: #00bcff;
+}
+
+.service__card:nth-child(21) div {
+    color: #ff1d1d;
+}
+
+.service__card:nth-child(22) div {
+    color: #ff1d1d;
+}
