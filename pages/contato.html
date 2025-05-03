@@ -6,6 +6,8 @@
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/contato.css" />
     <title>ED-PRINT</title>
@@ -34,7 +36,73 @@
       </div>
     </nav>
 
-    <section class="section__container header__container">CONTATO</section>
+    <section id="contato" class="formulário">
+      <h2 class="section__header">Entre em contato conosco!</h2>
+      <div class="interface">
+  
+          <div class="contato-box fundo">
+              <p class="desc">Fale comigo para parcerias, dúvidas ou oportunidades! Estou à disposição para ajudar.</p>
+  
+              <div class="contato-detail">
+                  <i class="fa-solid fa-phone"></i>
+                  <div class="detail">
+                      <p>Telefone / WhatsApp</p>
+                      <p><a href="https://wa.me/message/LJT52ITC7BYAN1" target="_blank">(94) 98133-4688</a></p>
+                  </div>
+              </div>                    
+  
+              <div class="contato-detail">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div class="detail">
+                      <p>E-mail</p>
+                      <p><a href="mailto:edprint.contato@gmail.com">edprint.contato@gmail.com</a></p>
+                  </div>
+              </div>
+  
+              <div class="contato-detail">
+                  <i class="fa-brands fa-instagram"></i>
+                  <div class="detail">
+                      <p>Instagram</p>
+                      <p><a href="https://www.instagram.com/ed_print.oficial?igsh=MWt3cGR5N29ra3h3bA==" target="_blank">ED - PRINT</a></p>
+                  </div>
+              </div>
+              
+          </div>
+  
+          <div class="contato-box">
+              <form id="contact-form">
+                  <div class="input-container nome">
+                      <input type="text" name="from_name" id="nome" placeholder=" " required>
+                      <label for="nome">Seu nome completo</label>
+                  </div>
+                  <div class="input-container email">
+                      <input type="email" name="reply_to" id="email" placeholder=" " required>
+                      <label for="email">Seu e-mail</label>
+                  </div>
+                  <div class="input-container telefone">
+                      <input type="tel" name="phone" id="celular" required>
+                      <label for="celular">Seu celular</label>
+                  </div>
+                  <div class="input-container mensagem">
+                      <textarea name="message" id="mensagem" placeholder=" " required></textarea>
+                      <label for="mensagem">Sua mensagem</label>
+                  </div>
+                  <div class="btn-enviar">
+                      <input type="submit" value="ENVIAR">
+                  </div>
+              </form>
+  
+              <div id="modal-confirmacao" class="modal">
+                  <div class="modal-content">
+                      <p>Mensagem enviada com sucesso!</p>
+                      <button id="fechar-modal">Fechar</button>
+                  </div>
+              </div>
+  
+          </div>
+  
+      </div>
+  </section>
 
     <footer>
       <div class="section__container footer__container">
@@ -48,7 +116,7 @@
           <h3>Siga-nos</h3>
           <ul class="footer__socials">
             <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+            <li><a href="https://www.instagram.com/ed_print.oficial?igsh=MWt3cGR5N29ra3h3bA==" target="_blank"><i class="ri-instagram-line"></i></a></li>
             <li><a href="https://wa.me/message/LJT52ITC7BYAN1" target="_blank"><i class="ri-whatsapp-line"></i></a></li>
           </ul>
         </div>
@@ -72,7 +140,7 @@
           <h4>Contato</h4>
           <ul class="footer__links">
             <li><a href="#"><i class="ri-phone-fill"></i> (94) 98133-4688</a></li>
-            <li><a href="#"><i class="ri-mail-fill"></i> edprint.contato@gmail.com</a></li>
+            <li><a href="mailto:edprint.contato@gmail.com"><i class="ri-mail-fill"></i> edprint.contato@gmail.com</a></li>
             <li><a href="#"><i class="ri-map-pin-2-fill"></i> Parauapebas - PA</a></li>
           </ul>
         </div>
@@ -87,5 +155,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../javascript/main.js"></script>
+    <script src="../javascript/contato.js"></script>
   </body>
 </html>
