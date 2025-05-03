@@ -497,6 +497,44 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem 1rem;
+  }
+
+  .header__image img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .header__content {
+    max-width: 100%;
+  }
+
+  .header__btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn, .btn_p {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .section__description {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+}
+
 @media (width > 768px) {
   nav {
     position: fixed;
