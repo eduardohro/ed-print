@@ -221,3 +221,19 @@
 .service__card:nth-child(22) div {
     color: #ff1d1d;
 }
+
+
+.footer__bar {
+    display: flexbox;
+    align-items: center;
+}
+  
+.footer__bar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+  
+.footer__bar a:hover {
+    color: var(--secondary-color);
+}
