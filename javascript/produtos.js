@@ -11,6 +11,28 @@ function filtrarCategoria(categoria) {
       } else {
         produto.style.display = 'none';
       }
-    });
-  }
+  });
+}
+
+const scrollRevealOption03 = {
+  distance: "50px",
+  origin: "left",
+  duration: 1000,
+};
+
+ScrollReveal().reveal(".produtos__categorias", {
+  ...scrollRevealOption03,
+  interval: 300,
+});
+
+ScrollReveal().reveal("#titulo-categoria", {
+  ...scrollRevealOption02,
+  interval: 300,
+});
+
+ScrollReveal().reveal(".produto__item", {
+  ...scrollRevealOption03,
+  interval: 300,
+  delay: 100
+});
   

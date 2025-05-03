@@ -29,6 +29,12 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
+const scrollRevealOption02 = {
+  distance: "50px",
+  origin: "top",
+  duration: 1000,
+};
+
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
 });
@@ -41,15 +47,6 @@ ScrollReveal().reveal(".header__btns", {
   delay: 1000,
 });
 
-ScrollReveal().reveal(".service__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-ScrollReveal().reveal(".service__btn", {
-  ...scrollRevealOption,
-  delay: 2000,
-});
-
 ScrollReveal().reveal(".about__container .section__header", {
   ...scrollRevealOption,
 });
@@ -59,6 +56,23 @@ ScrollReveal().reveal(".about__list li", {
   interval: 500,
 });
 
+ScrollReveal().reveal(".service__card", {
+  ...scrollRevealOption,
+  interval: 300,
+});
+ScrollReveal().reveal(".service__btn", {
+  ...scrollRevealOption,
+  delay: 2000,
+});
+
+ScrollReveal().reveal(".section__header", {
+  ...scrollRevealOption02,
+});
+
+ScrollReveal().reveal(".popular__card", {
+  ...scrollRevealOption02,
+  interval: 300,
+});
 
 ScrollReveal().reveal(".subscribe__content .section__header", {
   ...scrollRevealOption,

@@ -8,6 +8,9 @@
   --text-light: #767268;
   --extra-light: #888888;
   --white: #ffffff;
+  --white-gray: #ddd;
+  --black: #000000;
+  --strong-gray: #2c2c2c;
   --max-width: 1200px;
 }
 
@@ -223,6 +226,65 @@ nav {
   border-radius: 100%;
 }
 
+.about__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__image img {
+  max-width: 450px;
+  margin-inline: auto;
+}
+
+.about__content .section__header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about__list {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about__list li span {
+  max-width: max-content;
+  padding: 5px 8px;
+  font-size: 1.75rem;
+  border-radius: 5px;
+}
+
+.about__list li:nth-child(1) span {
+  color: #00d5be;
+  background-color: #f0fdfa;
+}
+
+.about__list li:nth-child(2) span {
+  color: #ff637e;
+  background-color: #fff1f2;
+}
+
+.about__list li:nth-child(3) span {
+  color: #c27aff;
+  background-color: #faf5ff;
+}
+
+.about__list h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.about__list .section__description {
+  text-align: left;
+}
+
 .service__container.section__header {
   max-width: 750px;
   margin-inline: auto;
@@ -237,7 +299,7 @@ nav {
 .service__card {
   padding: 1rem;
   border-radius: 0.75rem;
-  background-color: #000;
+  background-color: var(--black);
   border-bottom: 2px solid transparent;
   transition: 0.3s;
 }
@@ -306,64 +368,102 @@ nav {
   justify-content: center;
 }
 
-.about__container {
+.popular__grid {
+  margin-top: 7rem;
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+  gap: 4rem 1rem;
 }
 
-.about__image img {
-  max-width: 450px;
+.popular__card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 90%;
+}
+
+.popular__card::before {
+  position: absolute;
+  content: "";
+  bottom: 5rem;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.5s;
+  background-color: var(--black); 
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.popular__card:hover::before {
+  height: 90%;
+  box-shadow: 0 0 10px var(--secondary-color), 0 0 11px var(--secondary-color), 0 0 15px var(--secondary-color); 
+}
+
+.popular__card img {
+  max-width: 200px;
   margin-inline: auto;
 }
 
-.about__content .section__header {
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-.about__list {
-  display: grid;
-  gap: 2rem;
-}
-
-.about__list li {
+.popular__card__content {
+  min-height: 100px;
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.about__list li span {
-  max-width: max-content;
-  padding: 5px 8px;
-  font-size: 1.75rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--strong-gray); 
   border-radius: 5px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
-.about__list li:nth-child(1) span {
-  color: #00d5be;
-  background-color: #f0fdfa;
-}
-
-.about__list li:nth-child(2) span {
-  color: #ff637e;
-  background-color: #fff1f2;
-}
-
-.about__list li:nth-child(3) span {
-  color: #c27aff;
-  background-color: #faf5ff;
-}
-
-.about__list h4 {
+.popular__card__content h4 {
   margin-bottom: 0.5rem;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--white); 
+  text-align: center;
 }
 
-.about__list .section__description {
-  text-align: left;
+.popular__card__content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color); 
+  text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
+
+  .popular__card__content {
+    min-height: 150px;
+    padding: 1rem;
+  }
+
+  .popular__card__content h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.09rem;
+  }
+  
+  .popular__card__content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color); 
+    text-align: center;
+  }
+}
+
 
 .subscribe__content {
   padding: 5rem 1rem;
