@@ -2,11 +2,10 @@
     margin-top: 60px;
 }
 
-.service__card{
+.service__card {
     text-align: center;
     align-items: center;
 }
-  
   
 .service__card p {
     color: var(--extra-light);
@@ -222,7 +221,6 @@
     color: #ff1d1d;
 }
 
-
 .footer__bar {
     display: flexbox;
     align-items: center;
@@ -237,3 +235,13 @@
 .footer__bar a:hover {
     color: var(--secondary-color);
 }
+
+@media (max-width: 768px) {
+    
+    .service__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+}
+  
