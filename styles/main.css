@@ -193,7 +193,7 @@ nav {
   font-weight: 500;
   color: var(--text-light);
   line-height: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .header__container {
@@ -392,7 +392,7 @@ nav {
 .popular__grid {
   margin-top: 7rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 4rem 1rem;
 }
 

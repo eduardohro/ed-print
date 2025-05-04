@@ -42,6 +42,35 @@ ScrollReveal().reveal(".header__content .section__description", {
   ...scrollRevealOption,
   delay: 500,
 });
+ScrollReveal().reveal(".about__content .section__description", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".header__image", {
+  distance: "50px",
+  origin: "right",
+  duration: 1000,
+});
+ScrollReveal().reveal(".about__image", {
+  distance: "50px",
+  origin: "left",
+  duration: 1000,
+});
+ScrollReveal().reveal(".section__description.text", {
+  distance: "50px",
+  origin: "left",
+  duration: 1000,
+});
+ScrollReveal().reveal(".about__image.one", {
+  distance: "50px",
+  origin: "right",
+  duration: 1000,
+});
+ScrollReveal().reveal(".about__image.two", {
+  distance: "50px",
+  origin: "left",
+  duration: 1000,
+});
 ScrollReveal().reveal(".header__btns", {
   ...scrollRevealOption,
   delay: 1000,

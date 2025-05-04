@@ -1,3 +1,16 @@
+.section__container.sobre__content {
+    padding-bottom: 10rem;
+}
+
+.section__header.title {
+    padding: 7rem 0 1rem 0;
+}
+
+.section__description.text {
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
 .footer__bar {
     display: flexbox;
     align-items: center;
