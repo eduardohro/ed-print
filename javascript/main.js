@@ -115,3 +115,13 @@ ScrollReveal().reveal(".faq__item", {
   ...scrollRevealOption,
   interval: 300,
 });
+
+ScrollReveal().reveal(".privacy__item", {
+  ...scrollRevealOption,
+  interval: 300,
+});
+
+ScrollReveal().reveal(".terms__item", {
+  ...scrollRevealOption,
+  interval: 300,
+});
