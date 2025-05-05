@@ -110,3 +110,8 @@ ScrollReveal().reveal(".subscribe__content form", {
   ...scrollRevealOption,
   delay: 500,
 });
+
+ScrollReveal().reveal(".faq__item", {
+  ...scrollRevealOption,
+  interval: 300,
+});
