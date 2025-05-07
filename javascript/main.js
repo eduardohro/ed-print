@@ -51,6 +51,36 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       );
 });
 
+emailjs.init("pe_S8stSnrQaz9K8F");
+
+document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = this;
+
+  emailjs.sendForm("service_ce46rqs", "template_bwq3mse", form, "pe_S8stSnrQaz9K8F")
+    .then(() => {
+      document.getElementById("modal-confirmacao").style.display = "flex";
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Erro:", error);
+      alert("Erro ao inscrever-se. Tente novamente.");
+    });
+});
+
+// Modal fechar
+document.getElementById("fechar-modal").addEventListener("click", function () {
+  document.getElementById("modal-confirmacao").style.display = "none";
+});
+
+// Fechar clicando fora do modal
+window.addEventListener("click", function (event) {
+  const modal = document.getElementById("modal-confirmacao");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 // Fechar o modal ao clicar no botão "Fechar"
 document.getElementById("fechar-modal").addEventListener("click", function () {
   const modal = document.getElementById("modal-confirmacao");

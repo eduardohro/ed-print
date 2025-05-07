@@ -492,6 +492,97 @@ nav {
   font-size: 1rem;
 }
 
+/* Linha com input + botão lado a lado */
+form .form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  width: 100%; 
+}
+
+/* Campo de e-mail */
+.input-container.email input {
+  flex: 1; 
+  padding: 0.5rem 14rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  outline: none;
+  min-width: 0; 
+  width: 100%; 
+}
+
+/* Botão de envio */
+.btn-enviar input {
+  padding: 14px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+/* Hover no botão */
+.btn-enviar input:hover {
+  background-color: var(--body-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 1rem var(--primary-color);
+}
+
+/* ESTILO MENSAGEM ENVIADA */
+
+/* Estilo do modal */
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.modal-content {
+  background-color: #09001d;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background-color: var(--cor1); 
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: .3s;
+}
+
+.modal-content button:hover {
+  background-color: darken(var(--cor1), 10%); 
+  box-shadow: 0 0 1rem var(--primary-color);
+  color: var(--primary-color);
+}
+
 .footer__container {
   display: grid;
   gap: 4rem 2rem;
