@@ -23,6 +23,48 @@ window.addEventListener("scroll", function () {
     }
 });
 
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  // Simplesmente para debug (pode remover depois)
+  for (let pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+  }
+
+  // Envia o formulário usando EmailJS
+  emailjs.sendForm("service_ce46rqs", "template_jw2e2xb", this, "pe_S8stSnrQaz9K8F")
+      .then(
+          () => {
+              // Exibe o modal de confirmação
+              const modal = document.getElementById("modal-confirmacao");
+              modal.style.display = "flex"; // Mostra o modal
+
+              // Limpa o formulário após o envio (opcional)
+              this.reset();
+          },
+          (error) => {
+              console.error("Erro ao enviar mensagem:", error.text);
+              alert("Houve um erro ao enviar sua mensagem. Tente novamente.");
+          }
+      );
+});
+
+// Fechar o modal ao clicar no botão "Fechar"
+document.getElementById("fechar-modal").addEventListener("click", function () {
+  const modal = document.getElementById("modal-confirmacao");
+  modal.style.display = "none"; // Esconde o modal
+});
+
+// Fechar o modal ao clicar fora dele
+window.addEventListener("click", function (event) {
+  const modal = document.getElementById("modal-confirmacao");
+  if (event.target === modal) {
+      modal.style.display = "none"; // Esconde o modal
+  }
+});
+
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
