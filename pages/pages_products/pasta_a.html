@@ -35,9 +35,42 @@
       </div>
     </nav>
 
-    <section class="section__container about__container" id="about">
-        PASTA ABA ELÁSTICO
-    </section>
+    <section class="section__container product__page">
+        <div class="product__wrapper" style="display: flex; gap: 2rem; align-items: flex-start;">
+      
+          <div class="product__thumbnails" style="width: 100px;">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Pasta%20Aba%20Elastica.png" class="thumb" onclick="trocarImagem(this.src)">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/" class="thumb" onclick="trocarImagem(this.src)">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/" class="thumb" onclick="trocarImagem(this.src)">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/" class="thumb" onclick="trocarImagem(this.src)">
+          </div>
+      
+          <div class="product__image" id="imagem-principal">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Pasta%20Aba%20Elastica.png" alt="Pasta Aba Elástico Tilibra Transparente">
+          </div>
+      
+          <div class="product__info">
+            <h1 class="product__title">Pasta Aba Elástico Tilibra Ofício</h1>
+            <p class="product__price">R$ 5,00</p>
+            <p class="product__description">
+              A Pasta Aba Elástico da Tilibra é ideal para organizar e proteger seus documentos. Com formato ofício e material resistente, possui elástico nas extremidades para maior segurança dos papéis. Cor: Transparente.
+            </p>
+            <ul class="product__details">
+              <li>Formato: Ofício</li>
+              <li>Material: Plástico</li>
+              <li>Marca: Tilibra</li>
+              <li>Cor: Transparente</li>
+            </ul>
+            <div class="header__btns">
+              <a href="https://wa.me/message/LJT52ITC7BYAN1" class="btn_p">
+                <span><i class="ri-send-plane-line"></i></span>
+                Solicitar
+              </a>
+            </div>
+          </div>
+      
+        </div>
+      </section>         
 
     <footer>
       <div class="section__container footer__container">
@@ -90,7 +123,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="../javascript/main.js"></script>
-    <script src="../javascript/contato.js"></script>
+    <script src="../javascript_products/main_2.js"></script>
   </body>
 </html>
