@@ -169,6 +169,7 @@ form textarea:valid ~ label {
 .modal-content p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .modal-content button {

@@ -1,98 +1,83 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+window.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("pe_S8stSnrQaz9K8F");
 
-menuBtn.addEventListener("click", (e) => {
-  navLinks.classList.toggle("open");
+  // Botão do menu mobile
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  const menuBtnIcon = menuBtn.querySelector("i");
 
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+  });
 
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
+  navLinks.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+  });
 
-window.addEventListener("scroll", function () {
+  // Scroll nav
+  window.addEventListener("scroll", function () {
     const nav = document.querySelector("nav");
     if (window.scrollY > 50) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
     }
-});
+  });
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+  // Formulário de contato
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  const formData = new FormData(this);
-
-  // Simplesmente para debug (pode remover depois)
-  for (let pair of formData.entries()) {
-      console.log(pair[0] + ': ' + pair[1]);
-  }
-
-  // Envia o formulário usando EmailJS
-  emailjs.sendForm("service_ce46rqs", "template_jw2e2xb", this, "pe_S8stSnrQaz9K8F")
-      .then(
-          () => {
-              // Exibe o modal de confirmação
-              const modal = document.getElementById("modal-confirmacao");
-              modal.style.display = "flex"; // Mostra o modal
-
-              // Limpa o formulário após o envio (opcional)
-              this.reset();
-          },
-          (error) => {
-              console.error("Erro ao enviar mensagem:", error.text);
-              alert("Houve um erro ao enviar sua mensagem. Tente novamente.");
-          }
-      );
-});
-
-emailjs.init("pe_S8stSnrQaz9K8F");
-
-document.getElementById("subscribe-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const form = this;
-
-  emailjs.sendForm("service_ce46rqs", "template_bwq3mse", form, "pe_S8stSnrQaz9K8F")
-    .then(() => {
-      document.getElementById("modal-confirmacao").style.display = "flex";
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Erro:", error);
-      alert("Erro ao inscrever-se. Tente novamente.");
+      emailjs.sendForm("service_ce46rqs", "template_jw2e2xb", this)
+        .then(() => {
+          document.getElementById("modal-confirmacao").style.display = "flex";
+          this.reset();
+        })
+        .catch((error) => {
+          console.error("Erro ao enviar mensagem:", error.text);
+          alert("Houve um erro ao enviar sua mensagem.");
+        });
     });
-});
-
-// Modal fechar
-document.getElementById("fechar-modal").addEventListener("click", function () {
-  document.getElementById("modal-confirmacao").style.display = "none";
-});
-
-// Fechar clicando fora do modal
-window.addEventListener("click", function (event) {
-  const modal = document.getElementById("modal-confirmacao");
-  if (event.target === modal) {
-    modal.style.display = "none";
   }
-});
 
-// Fechar o modal ao clicar no botão "Fechar"
-document.getElementById("fechar-modal").addEventListener("click", function () {
-  const modal = document.getElementById("modal-confirmacao");
-  modal.style.display = "none"; // Esconde o modal
-});
+  // Formulário de inscrição
+  const subscribeForm = document.getElementById("subscribe-form");
+  if (subscribeForm) {
+    subscribeForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-// Fechar o modal ao clicar fora dele
-window.addEventListener("click", function (event) {
-  const modal = document.getElementById("modal-confirmacao");
-  if (event.target === modal) {
-      modal.style.display = "none"; // Esconde o modal
+      emailjs.sendForm("service_ce46rqs", "template_bwq3mse", this)
+        .then(() => {
+          document.getElementById("modal-confirmacao").style.display = "flex";
+          this.reset();
+        })
+        .catch((error) => {
+          console.error("Erro:", error);
+          alert("Erro ao inscrever-se. Tente novamente.");
+        });
+    });
   }
+
+  // Modal: fechar ao clicar no botão
+  const fecharModal = document.getElementById("fechar-modal");
+  if (fecharModal) {
+    fecharModal.addEventListener("click", function () {
+      document.getElementById("modal-confirmacao").style.display = "none";
+    });
+  }
+
+  // Modal: fechar ao clicar fora
+  const modal = document.getElementById("modal-confirmacao");
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 });
 
 const scrollRevealOption = {

@@ -485,14 +485,13 @@ nav {
 }
 
 .subscribe__content input {
-  width: 100%;
-  padding-inline: 1rem;
+  width: 25vw;
+  padding-inline: 1.5rem;
   outline: none;
   border: none;
   font-size: 1rem;
 }
 
-/* Linha com input + botão lado a lado */
 form .form-row {
   display: flex;
   align-items: center;
@@ -505,21 +504,9 @@ form .form-row {
   width: 100%; 
 }
 
-/* Campo de e-mail */
-.input-container.email input {
-  flex: 1; 
-  padding: 0.5rem 14rem 0.5rem 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc; 
-  border-radius: 5px;
-  outline: none;
-  min-width: 0; 
-  width: 100%; 
-}
-
-/* Botão de envio */
 .btn-enviar input {
   padding: 14px 20px;
+  width: 200px;
   background-color: var(--primary-color);
   color: var(--white);
   font-weight: bold;
@@ -530,7 +517,6 @@ form .form-row {
   transition: 0.3s;
 }
 
-/* Hover no botão */
 .btn-enviar input:hover {
   background-color: var(--body-color);
   color: var(--primary-color);
@@ -564,6 +550,7 @@ form .form-row {
 .modal-content p {
   font-size: 1.2em;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .modal-content button {
