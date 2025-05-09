@@ -56,6 +56,20 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
 }
+
+.product__link {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product__link:hover {
+    border: 1px solid var(--primary-color);
+}
   
 .produto__item {
     background: var(--black);

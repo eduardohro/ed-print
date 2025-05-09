@@ -210,6 +210,8 @@ nav {
   gap: 2rem;
 }
 
+
+
 @media (min-width: 768px) {
   .product__wrapper {
     flex-direction: row;
