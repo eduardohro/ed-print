@@ -149,24 +149,24 @@ nav {
 
 .nav__links {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
   width: 100%;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
   background-color: var(--secondary-color);
-  transition: transform 0.5s;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
   z-index: -1;
 }
 
 .nav__links.open {
-  transform: translateY(100%);
+  transform: translateY(0);
+  z-index: 10;
 }
+
 
 .nav__links a {
   font-size: 1rem;
