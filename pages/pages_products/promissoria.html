@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/eduardohro/ed-print/main/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles_products/main_2.css" />
+    <title>ED-PRINT</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo mobile">
+          <a href="#"><img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/logo-mobile-2.0.png" alt="LOGO"></a>
+        </div>
+        <div class="nav__logo desktop" style="text-align: center; margin-bottom: 20px;">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/logo.png" alt="Logo ED-PRINT" style="width: 250px; height: auto;">
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="https://ed-print.vercel.app/index.html#home">Início</a></li>
+        <li><a href="../sobre.html">Sobre a ED-PRINT</a></li>
+        <li><a href="../servicos.html">Serviços</a></li>
+        <li><a href="../produtos.html">Produtos</a></li>
+      </ul>
+      <div class="nav__btns">
+        <a class="btn" href="../contato.html">Fale Conosco</a>
+      </div>
+    </nav>
+
+    <section class="section__container product__page">
+        <div class="product__wrapper" style="display: flex; gap: 2rem; align-items: flex-start;">
+      
+          <div class="product__thumbnails" style="width: 100px;">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Nota Promissoria.png" class="thumb" onclick="trocarImagem(this.src)">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Nota Promissoria.png" class="thumb" onclick="trocarImagem(this.src)">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Nota Promissoria.png" class="thumb" onclick="trocarImagem(this.src)">
+          </div>
+      
+          <div class="product__image" id="imagem-principal">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Nota Promissoria.png" alt="Talão de Nota Promissória">
+          </div>
+
+          <div class="product__info">
+            <h1 class="product__title">Talão de Nota Promissória - 50 Folhas</h1>
+            <p class="product__price">R$ 4,00</p>
+            <p class="product__description">
+            O Talão de Nota Promissória é ideal para registrar compromissos de pagamento de forma clara e organizada. Com 50 folhas, oferece praticidade para uso comercial e pessoal no controle de dívidas e créditos.
+            </p>
+            <ul class="product__details">
+                <li>Quantidade: 50 folhas</li>
+                <li>Tamanho: 205 mm x 90 mm </li>
+                <li>Material: Papel sulfite com encadernação colada</li>
+            </ul>
+            <div class="header__btns">
+              <a href="https://wa.me/message/LJT52ITC7BYAN1" class="btn_p">
+                <span><i class="ri-send-plane-line"></i></span>
+                Solicitar
+              </a>
+            </div>
+          </div>
+      
+        </div>
+      </section>         
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#"><img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/logo.png" alt="LOGO"></a>
+          </div>
+          <p class="section__description">
+            ED-PRINT oferece serviços rápidos e essenciais como impressão, xerox, escaneamento e muito mais.
+          </p>
+          <h3>Siga-nos</h3>
+          <ul class="footer__socials">
+            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="https://www.instagram.com/ed_print.oficial?igsh=MWt3cGR5N29ra3h3bA==" target="_blank"><i class="ri-instagram-line"></i></a></li>
+            <li><a href="https://wa.me/message/LJT52ITC7BYAN1" target="_blank"><i class="ri-whatsapp-line"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Links Rápidos</h4>
+          <ul class="footer__links">
+            <li><a href="../sobre.html">Sobre a ED-PRINT</a></li>
+            <li><a href="../servicos.html">Serviços</a></li>
+            <li><a href="../termos.html">Termos de Uso</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Suporte</h4>
+          <ul class="footer__links">
+            <li><a href="../perguntas.html">Perguntas Frequentes</a></li>
+            <li><a href="../privacidade.html">Política de Privacidade</a></li>
+            <li><a href="../contato.html">Fale com a Gente</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <ul class="footer__links">
+            <li><a href="#"><i class="ri-phone-fill"></i> (94) 98133-4688</a></li>
+            <li><a href="mailto:edprint.contato@gmail.com"><i class="ri-mail-fill"></i> edprint.contato@gmail.com</a></li>
+            <li><a href="#"><i class="ri-map-pin-2-fill"></i> Parauapebas - PA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        © 2025 ED-PRINT. Todos os direitos reservados.  
+        <br>
+        Desenvolvido por <a href="https://eduardo-rodrigues.vercel.app/" target="_blank">Eduardo Rodrigues</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="../javascript_products/main_2.js"></script>
+  </body>
+</html>
