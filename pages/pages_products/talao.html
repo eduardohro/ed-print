@@ -39,10 +39,10 @@
         <div class="product__wrapper" style="display: flex; gap: 2rem; align-items: flex-start;">
       
           <div class="product__thumbnails" style="width: 100px;">
-            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão de Pedido 1-18.png" class="thumb" onclick="trocarImagem(this.src)">
-            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão_de_Pedido_1-18_01.png" class="thumb" onclick="trocarImagem(this.src)">
-            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão de Pedido 1-36.png" class="thumb" onclick="trocarImagem(this.src)">
-            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão_de_Pedido_1-36_01.png" class="thumb" onclick="trocarImagem(this.src)">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão de Pedido 1-18.png" class="thumb">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão_de_Pedido_1-18_01.png" class="thumb">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão de Pedido 1-36.png" class="thumb">
+            <img src="https://raw.githubusercontent.com/eduardohro/ed-print/main/assets/produtos/Talão_de_Pedido_1-36_01.png" class="thumb">
           </div>
       
           <div class="product__image" id="imagem-principal">
@@ -124,5 +124,77 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="../javascript_products/main_2.js"></script>
+    <script>
+      document.querySelectorAll('.product__thumbnails .thumb').forEach(thumb => {
+        thumb.addEventListener('click', (e) => {
+          const imgSrc = e.target.getAttribute('src');
+          trocarImagem(imgSrc);
+        });
+      });
+      const produtos = {
+        '1-18': {
+          titulo: 'Talão de Pedido 1/18 - 50 Folhas',
+          preco: 'R$ 5,00',
+          descricao: 'O Talão de Pedido 1/18 é ideal para registrar encomendas, vendas e pedidos com organização e clareza. Com 50 folhas, é uma ferramenta prática para o controle comercial em comércios, feiras e atendimentos diversos.',
+          detalhes: [
+            'Quantidade: 50 folhas',
+            'Tamanho: 1/18 de folha padrão',
+            'Formato: 139 mm x 209 mm',
+            'Material: Papel sulfite com encadernação colada'
+          ]
+        },
+        '1-36': {
+          titulo: 'Talão de Pedido 1/36 - 50 Folhas',
+          preco: 'R$ 3,00',
+          descricao: 'O Talão de Pedido 1/36 é ideal para registros mais compactos, perfeito para comércios e feiras com necessidade de controle de pedidos em menor espaço.',
+          detalhes: [
+            'Quantidade: 50 folhas',
+            'Tamanho: 1/36 de folha padrão',
+            'Formato: 104 mm x 146 mm',
+            'Material: Papel sulfite com encadernação colada'
+          ]
+        }
+      };
+
+      function trocarImagem(src) {
+
+        document.querySelector('#imagem-principal img').src = src;
+
+        if (src.includes('1-18')) {
+          atualizarInformacoes('1-18');
+        } else if (src.includes('1-36')) {
+          atualizarInformacoes('1-36');
+        }
+      }
+
+      let produtoAtual = '';
+
+      function atualizarInformacoes(produtoId) {
+        if (produtoAtual === produtoId) return; 
+
+        const produto = produtos[produtoId];
+        document.querySelector('.product__title').textContent = produto.titulo;
+        document.querySelector('.product__price').textContent = produto.preco;
+        document.querySelector('.product__description').textContent = produto.descricao;
+
+        const detalhesUl = document.querySelector('.product__details');
+        detalhesUl.innerHTML = '';
+        produto.detalhes.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          detalhesUl.appendChild(li);
+        });
+
+        produtoAtual = produtoId; 
+      }
+
+      document.querySelectorAll('.product__thumbnails .thumb').forEach(thumb => {
+        thumb.addEventListener('click', (e) => {
+          const imgSrc = e.target.getAttribute('src');
+          trocarImagem(imgSrc);
+        });
+      });
+
+    </script>
   </body>
 </html>
